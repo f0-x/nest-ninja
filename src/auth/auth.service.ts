@@ -37,6 +37,7 @@ export class AuthService {
     // return user;
     return this.signToken(user.id, user.email);
   }
+
   async register(signUpDto: SignUpDto) {
     //Generate the password hash
     const hash = await argon2.hash(signUpDto.password);
@@ -62,7 +63,8 @@ export class AuthService {
     } catch (error) {
       if (error instanceof Prisma.PrismaClientKnownRequestError) {
         if (error.code === "P2002") {
-          throw new Error("Email already taken");
+          // throw new Error("Email already taken");
+          throw new ForbiddenException("Email already taken");
         }
       }
       //If the error's not related to Prisma

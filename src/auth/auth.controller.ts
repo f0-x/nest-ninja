@@ -13,7 +13,7 @@ import { SignUpDto } from "./dto";
 export class AuthController {
   constructor(private authService: AuthService) {}
   @Post("signin")
-  async signIn(@Body(ValidationPipe) signInDto: Partial<SignUpDto>) {
+  async signIn(@Body(new ValidationPipe({whitelist: true})) signInDto: Partial<SignUpDto>) {
     try {
       return await this.authService.login(signInDto);
     } catch (error) {

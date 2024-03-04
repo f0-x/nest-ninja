@@ -18,11 +18,11 @@ model User {
   email String @unique
   hash  String
 
-  firstName String?
+  firstName String?    @unique
   lastName  String?
-  bookmarks  Bookmark[]
+  bookmarks Bookmark[]
 
-  @@map("users")
+  @@map("users") // Giving a label to the table model
 }
 
 model Bookmark {
