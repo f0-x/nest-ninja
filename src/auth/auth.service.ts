@@ -9,11 +9,15 @@ import { ConfigService } from "@nestjs/config";
 
 @Injectable()
 export class AuthService {
-  constructor(private prisma: PrismaService, private jwt: JwtService, private config: ConfigService) {}
+  constructor(
+    private prisma: PrismaService,
+    private jwt: JwtService,
+    private config: ConfigService
+  ) {}
   async login(signInDto: Partial<SignUpDto>) {
     //Find the user by email
     // if user not found throw appropriate exception
-    const user: Partial<User>|null = await this.prisma.user.findUnique({
+    const user: Partial<User> | null = await this.prisma.user.findUnique({
       where: {
         email: signInDto.email,
       },
@@ -72,15 +76,21 @@ export class AuthService {
     }
   }
 
-  async signToken(userId?: number, email?: string): Promise<string> {
+  async signToken(
+    userId?: number,
+    email?: string
+  ): Promise<{ access_token: string }> {
     const payload = {
       sub: userId,
-      email
-    }
-    const secret = this.config.get('JWT_SECRET');
-    return this.jwt.signAsync(payload, {
-      expiresIn: '15m',
-      secret: secret
-    })
+      email,
+    };
+    const secret = this.config.get("JWT_SECRET");
+    const token = await this.jwt.signAsync(payload, {
+      expiresIn: "15m",
+      secret: secret,
+    });
+    return {
+      access_token: token,
+    };
   }
 }
