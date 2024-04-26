@@ -14,6 +14,5 @@ export class PrismaService extends PrismaClient {
         },
       },
     });
-    console.log("🚀 ~ file: prisma.service.ts:8 ~ PrismaService ~ constructor ~ config:", config)
   }
 }
