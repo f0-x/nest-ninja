@@ -22,9 +22,10 @@ import { WeaponGuard } from "src/weapon.guard";
 export class NinjasController {
   constructor(private readonly ninjaService: NinjasService) {}
   @Get()
-  @UseGuards(WeaponGuard)
-  getNinjas(@Query("belt") belt: string, @Param("id", ParseIntPipe) id: number) {
-    return this.ninjaService.getNinjas(belt);
+  // @UseGuards(WeaponGuard)
+  // getNinjas(@Query("belt") belt: string, @Param("id", ParseIntPipe) id: number) {
+  getNinjas() {
+    return this.ninjaService.getNinjas();
   }
   @Get(":id")
   getNinja(@Param("id", ParseIntPipe) id: number) {

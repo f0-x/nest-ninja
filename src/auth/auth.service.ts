@@ -1,9 +1,8 @@
 import { ForbiddenException, Injectable } from "@nestjs/common";
-import { User, Bookmark } from "@prisma/client";
+import { User, Bookmark, Prisma } from "@prisma/client";
 import { PrismaService } from "src/prisma/prisma.service";
 import { SignUpDto } from "./dto/auth.dto";
 import * as argon2 from "argon2";
-import { Prisma } from "@prisma/client";
 import { JwtService } from "@nestjs/jwt";
 import { ConfigService } from "@nestjs/config";
 
