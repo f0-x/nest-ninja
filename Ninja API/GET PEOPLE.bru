@@ -5,7 +5,11 @@ meta {
 }
 
 get {
-  url: localhost:3333/people
+  url: http://localhost:3333/user/profile
   body: none
-  auth: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImVtYWlsIjoidGVzdEBnbWFpbC5jb20iLCJpYXQiOjE3MTQ3MzMyMTQsImV4cCI6MTcxNDczNDExNH0.GGchjHJfRf0gpvn7Hpapb3Sm9RJZ1MHZuQpqhoSBwW4
 }
