@@ -1,0 +1,15 @@
+meta {
+  name: Update Profile
+  type: http
+  seq: 5
+}
+
+get {
+  url: http://localhost:3333/user/profile
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjIsImVtYWlsIjoidGVzdDFAZ21haWwuY29tIiwiaWF0IjoxNzIwODc2MzQ3LCJleHAiOjE3MjA4NzcyNDd9.0GLknlxJKBo1y3ijdCnNx1P1dVbQjF_jBIIDFiJviMI
+}
