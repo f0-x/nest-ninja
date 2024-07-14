@@ -1,0 +1,106 @@
+{
+    "clientName": "Thunder Client",
+    "collectionName": "Ninjas API - Nest JS",
+    "collectionId": "bcb48680-4f8f-4e6c-9e1e-fcb3431935cb",
+    "dateExported": "2024-07-14T05:22:21.313Z",
+    "version": "1.2",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "bdb6df79-cdd6-4f2d-8306-0ff44de99ca0",
+            "colId": "bcb48680-4f8f-4e6c-9e1e-fcb3431935cb",
+            "containerId": "",
+            "name": "Get All Ninjas",
+            "url": "http://localhost:3333/ninjas",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2024-07-14T05:09:45.179Z",
+            "modified": "2024-07-14T05:09:54.602Z",
+            "headers": []
+        },
+        {
+            "_id": "999d3289-2cb5-4c71-ad30-ad227f89c567",
+            "colId": "bcb48680-4f8f-4e6c-9e1e-fcb3431935cb",
+            "containerId": "",
+            "name": "Sign In",
+            "url": "http://localhost:3333/auth/signin",
+            "method": "POST",
+            "sortNum": 30000,
+            "created": "2024-07-14T05:18:51.928Z",
+            "modified": "2024-07-14T05:19:52.049Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"email\": \"test1@gmail.com\",\n  \"password\": \"test123\",\n  \"firstName\": \"TestOne\",\n  \"lastName\": \"OneTest\"\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "6a145b84-dd0d-4e44-8775-44352a534af0",
+            "colId": "bcb48680-4f8f-4e6c-9e1e-fcb3431935cb",
+            "containerId": "",
+            "name": "Sign Up",
+            "url": "",
+            "method": "GET",
+            "sortNum": 40000,
+            "created": "2024-07-14T05:20:11.391Z",
+            "modified": "2024-07-14T05:20:34.659Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"email\": \"test1@gmail.com\",\n  \"password\": \"test123\",\n  \"firstName\": \"TestOne\",\n  \"lastName\": \"OneTest\"\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "f5a53470-10b6-4522-addb-249091c490ec",
+            "colId": "bcb48680-4f8f-4e6c-9e1e-fcb3431935cb",
+            "containerId": "",
+            "name": "Get User Profile",
+            "url": "http://localhost:3333/user/profile",
+            "method": "GET",
+            "sortNum": 50000,
+            "created": "2024-07-14T05:20:54.444Z",
+            "modified": "2024-07-14T05:21:13.353Z",
+            "headers": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjIsImVtYWlsIjoidGVzdDFAZ21haWwuY29tIiwiaWF0IjoxNzIwODc2MzQ3LCJleHAiOjE3MjA4NzcyNDd9.0GLknlxJKBo1y3ijdCnNx1P1dVbQjF_jBIIDFiJviMI"
+            }
+        },
+        {
+            "_id": "9213ec24-6eb2-4a67-9132-422e022dd056",
+            "colId": "bcb48680-4f8f-4e6c-9e1e-fcb3431935cb",
+            "containerId": "",
+            "name": "Update User Profile",
+            "url": "http://localhost:3333/user/profile",
+            "method": "PATCH",
+            "sortNum": 60000,
+            "created": "2024-07-14T05:21:27.044Z",
+            "modified": "2024-07-14T05:21:56.411Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\r\n  \"id\": 2,\r\n  \"createdAt\": \"2024-07-13T09:59:27.317Z\",\r\n  \"updatedAt\": \"2024-07-13T09:59:27.317Z\",\r\n  \"email\": \"test1@gmail.com\",\r\n  \"firstName\": \"Vicky\",\r\n  \"lastName\": \"Dicky\"\r\n}",
+                "form": []
+            },
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjIsImVtYWlsIjoidGVzdDFAZ21haWwuY29tIiwiaWF0IjoxNzIwODg4NzQ0LCJleHAiOjE3MjA4ODk2NDR9.nQsQ9mTvkpo6cAjmo4kuXwhPsgwnne3RbMLrUYjnGqI"
+            }
+        },
+        {
+            "_id": "255ba44e-1fad-4d73-9ee1-2cbe1c6c35d2",
+            "colId": "bcb48680-4f8f-4e6c-9e1e-fcb3431935cb",
+            "containerId": "",
+            "name": "Get Homepage",
+            "url": "http://localhost:3333/",
+            "method": "GET",
+            "sortNum": 70000,
+            "created": "2024-07-14T05:22:11.364Z",
+            "modified": "2024-07-14T05:22:15.349Z",
+            "headers": []
+        }
+    ],
+    "ref": "QUsVQ15EoJm0bxPAhsjjqWWR_YOSM7DpJZyjMAjXS3eGBCvCUVjgtfMkQrB6pYQtmxKRObOnehncooDbedX6Xg"
+}
