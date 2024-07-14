@@ -1,0 +1,49 @@
+GET http://localhost:3333/users HTTP/1.1
+Content-Type: application/json
+###
+
+POST http://localhost:3333/auth/signin HTTP/1.1
+Content-Type: application/json
+
+{
+  "email": "test1@gmail.com",
+  "password": "test123",
+  "firstName": "TestOne",
+  "lastName": "OneTest"
+}
+###
+
+POST http://localhost:3333/auth/signup HTTP/1.1
+Content-Type: application/json
+
+{
+  "email": "test1@gmail.com",
+  "password": "test123",
+  "firstName": "Vicky",
+  "lastName": "Ticky"
+}
+###
+
+GET http://localhost:3333/user/profile HTTP/1.1
+Content-Type: application/json
+
+###
+
+PATCH http://localhost:3333/user/profile HTTP/1.1
+Content-Type: application/json
+
+{
+  "id": 2,
+  "createdAt": "2024-07-13T09:59:27.317Z",
+  "updatedAt": "2024-07-13T09:59:27.317Z",
+  "email": "test1@gmail.com",
+  "firstName": "Vicky",
+  "lastName": "Dicky"
+}
+###
+
+GET http://localhost:3333/user/profile HTTP/1.1
+Content-Type: application/json
+Authorization: {{$dotenv .env DATABASE_URL}}
+
+###
